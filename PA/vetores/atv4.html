@@ -1,0 +1,21 @@
+<script>
+let notas = [];
+let soma = 0;
+let texto = "";
+
+for (let i = 0; i < 8; i++) {
+    notas[i] = parseFloat(prompt("Digite a " + (i + 1) + "ª nota:"));
+    soma = soma + notas[i];
+}
+
+for (let i = 0; i < 8; i++) {
+    texto = texto + notas[i];
+    if (i < 7) {
+        texto = texto + ", ";
+    }
+}
+
+let media = soma / 8;
+alert("Notas digitadas: " + texto +
+    "\nA média das notas é: " + media);
+</script>

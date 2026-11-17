@@ -1,0 +1,36 @@
+<script>
+let vetorA = [];
+let vetorB = [];
+let vetorC = [];
+let textoA = "";
+let textoB = "";
+let textoC = "";
+
+for (let i = 0; i < 5; i++) {
+    vetorA[i] = parseFloat(prompt("Digite o " + (i + 1) + "º número do vetor A:"));
+}
+
+for (let i = 0; i < 5; i++) {
+    vetorB[i] = parseFloat(prompt("Digite o " + (i + 1) + "º número do vetor B:"));
+}
+
+for (let i = 0; i < 5; i++) {
+    vetorC[i] = vetorA[i] + vetorB[i];
+}
+
+for (let i = 0; i < 5; i++) {
+    textoA = textoA + vetorA[i];
+    textoB = textoB + vetorB[i];
+    textoC = textoC + vetorC[i];
+
+    if (i < 4) {
+        textoA = textoA + ", ";
+        textoB = textoB + ", ";
+        textoC = textoC + ", ";
+    }
+}
+
+alert("Vetor A: " + textoA +
+    "\nVetor B: " + textoB +
+    "\nVetor C: " + textoC);
+</script>

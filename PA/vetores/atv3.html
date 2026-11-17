@@ -1,0 +1,20 @@
+<script>
+let numeros = [];
+let soma = 0;
+let texto = "";
+
+for (let i = 0; i < 10; i++) {
+    numeros[i] = parseFloat(prompt("Digite o " + (i + 1) + "º número:"));
+    soma = soma + numeros[i];
+}
+
+for (let i = 0; i < 10; i++) {
+    texto = texto + numeros[i];
+    if (i < 9) {
+        texto = texto + ", ";
+    }
+}
+
+alert("Números digitados: " + texto +
+    "\nA soma dos elementos é: " + soma);
+</script>

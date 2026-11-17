@@ -1,0 +1,22 @@
+<script>
+let numeros = [];
+
+for (let i = 0; i < 10; i++) {
+    numeros[i] = parseInt(prompt("Digite o " + (i + 1) + "º número inteiro:"), 10);
+}
+
+let pesquisa = parseInt(prompt("Qual número você quer procurar?"), 10);
+let encontrado = false;
+
+for (let i = 0; i < 10; i++) {
+    if (numeros[i] === pesquisa) {
+        encontrado = true;
+    }
+}
+
+if (encontrado) {
+    alert("O número " + pesquisa + " foi encontrado no vetor.");
+} else {
+    alert("O número " + pesquisa + " não foi encontrado no vetor.");
+}
+</script>

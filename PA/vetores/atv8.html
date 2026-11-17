@@ -1,0 +1,31 @@
+<script>
+let numeros = [];
+let positivos = 0;
+let negativos = 0;
+let zeros = 0;
+let texto = "";
+
+for (let i = 0; i < 10; i++) {
+    numeros[i] = parseInt(prompt("Digite o " + (i + 1) + "º número inteiro:"), 10);
+}
+
+for (let i = 0; i < 10; i++) {
+    texto = texto + numeros[i];
+    if (i < 9) {
+        texto = texto + ", ";
+    }
+
+    if (numeros[i] > 0) {
+        positivos = positivos + 1;
+    } else if (numeros[i] < 0) {
+        negativos = negativos + 1;
+    } else {
+        zeros = zeros + 1;
+    }
+}
+
+alert("Números digitados: " + texto +
+    "\nQuantidade de positivos: " + positivos +
+    "\nQuantidade de negativos: " + negativos +
+    "\nQuantidade de zeros: " + zeros);
+</script>

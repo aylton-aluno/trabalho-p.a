@@ -1,0 +1,27 @@
+<script>
+let numeros = [];
+let inverso = [];
+let textoOriginal = "";
+let textoInverso = "";
+
+for (let i = 0; i < 10; i++) {
+    numeros[i] = parseInt(prompt("Digite o " + (i + 1) + "º número inteiro:"), 10);
+}
+
+for (let i = 0; i < 10; i++) {
+    inverso[i] = numeros[9 - i];
+}
+
+for (let i = 0; i < 10; i++) {
+    textoOriginal = textoOriginal + numeros[i];
+    textoInverso = textoInverso + inverso[i];
+
+    if (i < 9) {
+        textoOriginal = textoOriginal + ", ";
+        textoInverso = textoInverso + ", ";
+    }
+}
+
+alert("Vetor original: " + textoOriginal +
+    "\nVetor em ordem inversa: " + textoInverso);
+</script>
