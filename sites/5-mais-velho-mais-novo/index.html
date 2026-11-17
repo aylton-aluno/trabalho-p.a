@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pessoa mais velha e mais nova (for)</title>
+</head>
+<body>
+<script>
+    let anoAtual = parseInt(prompt("Digite o ano atual:"));
+    let maisVelho = 0;
+    let maisNovo = 999;
+
+    for(let i = 1; i <= 5; i++){
+        let anoNasc = parseInt(prompt("Ano de nascimento da pessoa " + i + ":"));
+        let idade = anoAtual - anoNasc;
+
+        document.write("Pessoa " + i + " - Idade: " + idade + "<br>");
+
+        if(idade > maisVelho){
+            maisVelho = idade;
+        }
+        if(idade < maisNovo){
+            maisNovo = idade;
+        }
+    }
+
+    document.write("<br>Idade do mais velho: " + maisVelho + "<br>");
+    document.write("Idade do mais novo: " + maisNovo);
+</script>
+</body>
+</html>
